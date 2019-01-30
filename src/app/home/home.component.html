@@ -1,0 +1,27 @@
+<h1>Products</h1>
+
+<section>{{purchase}}</section>
+
+<ul *ngIf="items">
+  <ng-container *ngFor="let item of items.Items; let i = index">
+    <li *ngIf="inStock(i)" [ngClass]="item.productid == '0m8hjmd721' ? 'featured' : 'gen'">
+      <img src="assets/product.png" alt="Product Image" />
+      <p><label>ID:</label> {{ item.productid }}</p>
+      <p><label>Name:</label> {{ item.name }}</p>
+      <p><label>Brand:</label> {{ item.brand }}</p>
+      <p><label>Colour:</label> {{ item.colour }}</p>
+      <p class="desc"><label>Description:</label> {{ item.description }}</p>
+      <p>
+        <label>Size:</label>
+        <select>
+          <ng-container *ngFor="let key of objectKeys(item.size);">
+            <option value = "{{key}}" *ngIf="item.size[key] > 0">
+              {{key}}
+            </option>
+          </ng-container>
+        </select>
+      </p>
+      <p><button (click)="purchaseHandle(i)">Buy</button></p>
+    </li>
+  </ng-container>
+</ul>

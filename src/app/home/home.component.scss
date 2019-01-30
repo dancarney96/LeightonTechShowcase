@@ -1,0 +1,55 @@
+ul {
+  list-style-type: none;
+  max-width: 100%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .gen {
+    padding: 20px;
+    width: 240px;
+    background-color: #d5d2d2;
+    margin: 5px;
+    order: 2;
+  }
+
+  .featured {
+    padding: 20px;
+    width: 240px;
+    background-color: firebrick;
+    margin: 5px;
+    order: 1;
+    color: white;
+
+    button {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #ca392d;
+    color: white;
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  select {
+    width: 100%;
+  }
+}
